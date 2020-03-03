@@ -231,7 +231,7 @@ class CsseCovidMapWidget
                 } else {
                     $value = log10($v);
                 }
-                $data['logarithmic'][$k] = $value);
+                $data['logarithmic'][$k] = $value;
             }
         }
         $data['scope'] = Inflector::humanize($options['type']);

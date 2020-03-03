@@ -54,7 +54,7 @@ class CsseCovidWidget
                 } else {
                     $value = log10($v);
                 }
-                $data['logarithmic'][$k] = $value);
+                $data['logarithmic'][$k] = $value;
             }
         }
         return $data;
