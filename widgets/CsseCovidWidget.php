@@ -47,7 +47,14 @@ class CsseCovidWidget
         if (!empty($options['logarithmic'])) {
             $data['logarithmic'] = array();
             foreach ($data['data'] as $k => $v) {
-                $data['logarithmic'][$k] = ($v == 0 ? 0 : log10($v));
+                if ($v == 0) {
+                    $value = 0;
+                } else if ($v <= 1) {
+                    $value = 1;
+                } else {
+                    $value = log10($v);
+                }
+                $data['logarithmic'][$k] = $value);
             }
         }
         return $data;
