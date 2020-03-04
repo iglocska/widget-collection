@@ -50,7 +50,7 @@ class CsseCovidWidget
                 if ($v == 0) {
                     $value = 0;
                 } else if ($v <= 1) {
-                    $value = 1;
+                    $value = 0.2;
                 } else {
                     $value = log10($v);
                 }
